@@ -1,0 +1,667 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Évasion Relaxante à Bangkok : Temples, Marchés Flottants et Douceurs Thaïlandaises </title>
+    <link rel="icon" type="image/png" href="https://api.mytripplanner.fr/api/files/pbc_1321337024/47976eld0rscwbc/favicon_ytvg76obie.svg?thumb=100x100&token=" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée en douceur à Bangkok</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Temples emblématiques et sérénité fluviale</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Grandeur royale et oasis de verdure</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Marchés flottants et saveurs locales</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Art, histoire et immersion culinaire</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Chinatown vibrant et vues panoramiques</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Voyage dans le temps à Ayutthaya</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Journée de bien-être et de relaxation</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Shopping moderne et monde aquatique</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Canaux secrets et dîner romantique</a>
+            
+                <a href="#jour-11" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J11 Musées uniques et cité ancienne</a>
+            
+                <a href="#jour-12" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J12 Le poumon vert de Bangkok : Bang Krachao</a>
+            
+                <a href="#jour-13" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J13 Préparatifs du Nouvel An et célébration</a>
+            
+                <a href="#jour-14" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J14 Douceur du Nouvel An et adieux</a>
+            
+                <a href="#jour-15" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J15 Derniers instants et départ</a>
+            
+                <a href="#jour-16" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J16 Arrivée à Francfort</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Bangkok-thailande-3i21g6j7jqvc6p3/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">BANGKOK- THAILANDE</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">Évasion Relaxante à Bangkok : Temples, Marchés Flottants et Douceurs Thaïlandaises</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ Du 19 Décembre 2026 au 3 Janvier 2027</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 Environ 2800-3500 €/personne</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 Environ 14h (avec escale) depuis Francfort-sur-le-main, allemagne</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+      <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+      </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée en douceur à Bangkok</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long vol, la première journée est dédiée à l'installation et à une immersion légère dans l'ambiance de Bangkok. Profitez du confort de votre hôtel et d'une première balade relaxante.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛬 Arrivée à l'aéroport Suvarnabhumi (BKK)</strong>: Transfert vers votre hôtel au cœur de Bangkok.</li><li><strong>🛏️ Installation et détente à l'hôtel</strong>: Prenez le temps de vous rafraîchir et de vous reposer après le voyage.</li><li><strong>🚶‍♂️ Première balade nocturne et dîner léger</strong>: Explorez les environs de votre hôtel, imprégnez-vous des lumières et des sons de la ville, puis savourez un premier repas thaïlandais.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Bangkok-thailande-3i21g6j7jqvc6p3/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ À savoir</p>
+                                <p class="text-gray-700">Le trajet de l'aéroport au centre-ville peut prendre 45 min à 1h30 selon le trafic. Privilégiez l'Airport Rail Link pour plus de rapidité.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Temples emblématiques et sérénité fluviale</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Découvrez la majesté des temples de Bangkok et laissez-vous bercer par les eaux du fleuve Chao Phraya, offrant une perspective unique sur la ville.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🌅 Visite du Wat Arun (Temple de l'Aube)</strong>: Admirez ce temple emblématique avec ses tours incrustées de porcelaine, particulièrement photogénique le matin.</li><li><strong>🧘‍♀️ Exploration du Wat Pho (Bouddha Couché)</strong>: Contemplez l'impressionnant Bouddha couché doré et profitez de l'ambiance paisible du temple, berceau du massage thaïlandais.</li><li><strong>🚤 Croisière relaxante sur le Chao Phraya</strong>: Montez à bord d'un bateau-navette pour une balade douce sur le fleuve, observant la vie locale et les monuments depuis l'eau.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Bangkok-thailande-3i21g6j7jqvc6p3/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Astuce vestimentaire</p>
+                                <p class="text-gray-700">Pour la visite des temples, prévoyez des vêtements couvrant les épaules et les genoux. Des sarongs sont souvent disponibles à la location si besoin.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Grandeur royale et oasis de verdure</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez dans l'histoire royale de la Thaïlande avant de trouver la quiétude dans l'un des plus beaux parcs de la ville, un véritable poumon vert.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>👑 Visite du Grand Palais et du Wat Phra Kaew</strong>: Explorez l'ancienne résidence royale et le temple du Bouddha d'Émeraude, un site d'une richesse architecturale et spirituelle incroyable.</li><li><strong>🌳 Détente au Parc Lumphini</strong>: Profitez d'une promenade paisible dans ce grand parc urbain, observez les varans se prélasser et les habitants pratiquer le tai-chi.</li><li><strong>🌇 Coucher de soleil depuis un rooftop bar</strong>: Terminez la journée en admirant la vue panoramique sur Bangkok depuis un bar en hauteur, un moment de pure relaxation.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Bangkok-thailande-3i21g6j7jqvc6p3/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⚠️ Attention aux arnaques</p>
+                                <p class="text-gray-700">Autour du Grand Palais, des rabatteurs peuvent vous dire que le palais est fermé. Ignorez-les et vérifiez toujours les informations officielles.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Marchés flottants et saveurs locales</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Éveillez vos sens au cœur de marchés traditionnels, où les couleurs et les parfums se mêlent pour une expérience authentique et dépaysante.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛶 Excursion au marché flottant de Damnoen Saduak</strong>: Embarquez pour une balade en pirogue à travers ce marché emblématique, où les vendeurs proposent leurs produits directement depuis leurs bateaux.</li><li><strong>🚂 Visite du marché ferroviaire de Maeklong</strong>: Assistez au spectacle unique des étals qui se replient en un clin d'œil au passage du train, une expérience insolite et mémorable.</li><li><strong>💆‍♀️ Massage thaïlandais traditionnel</strong>: Offrez-vous un moment de pure relaxation avec un massage thaïlandais, idéal pour détendre les muscles après une journée d'exploration.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Bangkok-thailande-3i21g6j7jqvc6p3/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Conseil horaire</p>
+                                <p class="text-gray-700">Les marchés flottants sont plus animés tôt le matin. Prévoyez un départ matinal pour profiter pleinement de l'ambiance.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Art, histoire et immersion culinaire</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Découvrez l'héritage culturel de Bangkok à travers l'art et l'histoire, puis plongez dans les secrets de la cuisine thaïlandaise lors d'un atelier interactif.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🖼️ Exploration du Bangkok Art and Culture Centre (BACC)</strong>: Flânez dans les galeries de ce centre d'art contemporain, offrant une pause rafraîchissante et inspirante.</li><li><strong>🏡 Visite de la Maison de Jim Thompson</strong>: Découvrez l'histoire fascinante de cet Américain qui a relancé l'industrie de la soie thaïlandaise, dans sa magnifique demeure traditionnelle.</li><li><strong>🧑‍🍳 Cours de cuisine thaïlandaise</strong>: Apprenez à préparer des plats emblématiques de la Thaïlande dans une ambiance conviviale, une activité relaxante et gourmande.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Bangkok-thailande-3i21g6j7jqvc6p3/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌶️ Saveurs à emporter</p>
+                                <p class="text-gray-700">Un cours de cuisine est une excellente façon de ramener un peu de Thaïlande chez vous. N'hésitez pas à demander des recettes supplémentaires !</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Chinatown vibrant et vues panoramiques</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Perdez-vous dans l'effervescence de Chinatown, un quartier riche en saveurs et en couleurs, avant de prendre de la hauteur pour admirer la ville.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🍜 Exploration de Yaowarat (Chinatown)</strong>: Flânez dans les rues animées de Chinatown, découvrez ses temples, ses boutiques d'or et ses innombrables stands de street food.</li><li><strong> ascends Montée au Wat Saket (Golden Mount)</strong>: Gravissez les quelques marches menant au sommet de cette colline artificielle pour profiter d'une vue imprenable à 360° sur Bangkok, un effort récompensé.</li><li><strong>🍲 Dîner de street food à Chinatown</strong>: Laissez-vous tenter par les délices culinaires de Yaowarat, réputé pour être l'un des meilleurs endroits pour la street food à Bangkok.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Bangkok-thailande-3i21g6j7jqvc6p3/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚶‍♀️ Conseil de marche</p>
+                                <p class="text-gray-700">Chinatown est un quartier qui se découvre à pied. Prévoyez des chaussures confortables et soyez prêt à vous laisser porter par la foule.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Voyage dans le temps à Ayutthaya</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Évadez-vous de l'agitation de la capitale pour une journée sereine à Ayutthaya, l'ancienne capitale du Siam, classée au patrimoine mondial de l'UNESCO.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚆 Trajet relaxant vers Ayutthaya</strong>: Prenez le train depuis Bangkok pour un voyage pittoresque et confortable vers l'ancienne capitale.</li><li><strong>🚲 Exploration du parc historique d'Ayutthaya</strong>: Louez un vélo ou un tuk-tuk pour découvrir à votre rythme les majestueux temples en ruines et les statues de Bouddha, témoins d'un glorieux passé.</li><li><strong>🌅 Coucher de soleil sur les ruines</strong>: Profitez de la lumière dorée du soir qui sublime les vestiges d'Ayutthaya, un moment magique et apaisant.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Bangkok-thailande-3i21g6j7jqvc6p3/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Option de transport</p>
+                                <p class="text-gray-700">Pour une expérience encore plus relaxante, vous pouvez opter pour une croisière fluviale vers Ayutthaya, incluant souvent le déjeuner.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Journée de bien-être et de relaxation</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après les explorations, offrez-vous une journée entière dédiée au bien-être, à la détente et à la revitalisation du corps et de l'esprit.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🧖‍♀️ Matinée au spa de luxe</strong>: Profitez d'un soin complet dans un spa réputé de Bangkok, incluant massages, gommages et rituels de beauté thaïlandais.</li><li><strong> poolside Déjeuner léger et farniente au bord de la piscine</strong>: Savourez un repas sain et détendez-vous au soleil, loin de l'agitation urbaine.</li><li><strong>🧘 Méditation ou cours de yoga doux</strong>: Participez à une séance de méditation guidée ou de yoga pour apaiser votre esprit et retrouver l'équilibre intérieur.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Bangkok-thailande-3i21g6j7jqvc6p3/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌿 Produits naturels</p>
+                                <p class="text-gray-700">De nombreux spas thaïlandais utilisent des ingrédients naturels et des herbes locales pour leurs soins, offrant une expérience authentique et bénéfique.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Shopping moderne et monde aquatique</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Découvrez le visage moderne de Bangkok à travers ses centres commerciaux luxueux et plongez dans la richesse de la vie marine pour une pause rafraîchissante.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛒 Shopping au Siam Paragon et MBK Center</strong>: Explorez ces immenses centres commerciaux, parfaits pour trouver des souvenirs, des marques internationales ou simplement profiter de la climatisation.</li><li><strong>🐠 Visite de Sea Life Bangkok Ocean World</strong>: Plongez dans le plus grand aquarium d'Asie du Sud-Est, une activité relaxante et fascinante pour tous les âges.</li><li><strong>🍽️ Dîner dans le quartier de Siam</strong>: Profitez de la multitude de restaurants et de cafés modernes dans ce quartier animé pour un dîner décontracté.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Bangkok-thailande-3i21g6j7jqvc6p3/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">❄️ Échapper à la chaleur</p>
+                                <p class="text-gray-700">Les centres commerciaux sont une excellente option pour échapper à la chaleur de l'après-midi et profiter d'un environnement climatisé.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Canaux secrets et dîner romantique</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Explorez les "khlongs" (canaux) cachés de Bangkok pour un aperçu de la vie locale, puis terminez la journée par une croisière-dîner mémorable sur le fleuve.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛶 Tour des khlongs en longtail boat</strong>: Embarquez pour une balade authentique sur les canaux, découvrant des maisons sur pilotis et des temples cachés, loin de l'agitation des rues.</li><li><strong>🍎 Visite du marché Or Tor Kor</strong>: Explorez ce marché alimentaire haut de gamme, réputé pour la qualité de ses produits frais, fruits exotiques et plats préparés.</li><li><strong>🍽️ Croisière-dîner sur le Chao Phraya</strong>: Savourez un délicieux dîner tout en admirant les monuments illuminés de Bangkok depuis le fleuve, une expérience romantique et relaxante.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Bangkok-thailande-3i21g6j7jqvc6p3/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Opportunités photo</p>
+                                <p class="text-gray-700">Le tour des khlongs offre de superbes opportunités de photos de la vie locale et des paysages verdoyants.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-11" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Musées uniques et cité ancienne</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Découvrez des architectures étonnantes et des répliques grandeur nature de monuments thaïlandais, offrant une immersion culturelle sans l'agitation des foules.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🐘 Visite du Musée Erawan</strong>: Admirez l'impressionnant éléphant à trois têtes en bronze et explorez les trois niveaux du musée, chacun représentant un monde différent.</li><li><strong>🏰 Exploration de l'Ancient City (Muang Boran)</strong>: Parcourez ce vaste musée en plein air qui abrite des répliques de monuments et de bâtiments historiques de toute la Thaïlande. Louez un vélo ou une voiturette de golf pour une visite relaxante.</li><li><strong>🌅 Coucher de soleil à Ancient City</strong>: Profitez des lumières du soir qui illuminent les répliques, créant une atmosphère magique et sereine.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Bangkok-thailande-3i21g6j7jqvc6p3/main/jour11.jpg" class="w-full h-64 object-cover" alt="Jour 11">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚗 Transport</p>
+                                <p class="text-gray-700">Ces sites sont un peu excentrés. Un taxi ou un VTC (Grab) est recommandé pour s'y rendre confortablement.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-12" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 12</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Le poumon vert de Bangkok : Bang Krachao</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Échappez à l'agitation urbaine pour une journée de pure nature et de tranquillité dans l'oasis verdoyante de Bang Krachao, le "poumon vert" de Bangkok.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong> ferry Trajet en ferry vers Bang Krachao</strong>: Traversez le fleuve Chao Phraya en ferry pour atteindre cette île paisible, où le temps semble s'arrêter.</li><li><strong>🚲 Balade à vélo dans Bang Krachao</strong>: Louez un vélo et explorez les sentiers surélevés à travers la jungle luxuriante, les cocoteraies et les petits villages, une expérience incroyablement relaxante.</li><li><strong>🌸 Visite du Sri Nakhon Khuean Khan Park</strong>: Détendez-vous dans ce magnifique parc botanique, observez les oiseaux et profitez de la sérénité des lieux.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Bangkok-thailande-3i21g6j7jqvc6p3/main/jour12.jpg" class="w-full h-64 object-cover" alt="Jour 12">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚴 Conseil vélo</p>
+                                <p class="text-gray-700">Les vélos sont facilement disponibles à la location dès l'arrivée du ferry. Les sentiers sont plats et faciles, adaptés à tous les niveaux.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-13" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 13</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Préparatifs du Nouvel An et célébration</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez de cette journée pour quelques dernières emplettes ou revisiter un lieu coup de cœur, avant de vous préparer pour les festivités du Nouvel An.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛍️ Dernières emplettes ou revisite d'un lieu favori</strong>: Profitez de la matinée pour acheter des souvenirs ou retourner dans un quartier que vous avez particulièrement apprécié.</li><li><strong>💅 Moment de détente et de préparation</strong>: Offrez-vous un soin des pieds ou un massage pour être au top pour la soirée du Nouvel An.</li><li><strong>🎆 Dîner de réveillon et célébrations du Nouvel An</strong>: Participez aux festivités, que ce soit lors d'un dîner spécial, d'une croisière sur le fleuve ou dans un bar rooftop pour admirer les feux d'artifice.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Bangkok-thailande-3i21g6j7jqvc6p3/main/jour13.jpg" class="w-full h-64 object-cover" alt="Jour 13">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🥂 Réservations</p>
+                                <p class="text-gray-700">Pour le réveillon du Nouvel An, il est fortement recommandé de réserver votre restaurant ou votre place pour une croisière bien à l'avance.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-14" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 14</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Douceur du Nouvel An et adieux</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Commencez la nouvelle année en douceur, avec une matinée relaxante, avant de profiter des dernières heures à Bangkok et d'un dîner d'adieu.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>😴 Matinée libre et grasse matinée</strong>: Reposez-vous après les festivités de la veille et profitez d'un petit-déjeuner tardif.</li><li><strong>🙏 Visite d'un temple paisible ou dernière balade</strong>: Optez pour une visite tranquille d'un temple moins fréquenté ou une dernière promenade dans un quartier que vous aimez.</li><li><strong> farewell Dîner d'adieu aux saveurs thaïlandaises</strong>: Savourez un dernier repas mémorable dans un restaurant de votre choix, pour clore ce voyage en beauté.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Bangkok-thailande-3i21g6j7jqvc6p3/main/jour14.jpg" class="w-full h-64 object-cover" alt="Jour 14">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Souvenirs</p>
+                                <p class="text-gray-700">Profitez de cette journée pour acheter les derniers petits cadeaux ou souvenirs que vous auriez oubliés.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-15" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 15</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Derniers instants et départ</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez d'une dernière matinée à Bangkok pour un petit-déjeuner typique ou une ultime flânerie avant de prendre la route de l'aéroport.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🍳 Petit-déjeuner thaïlandais</strong>: Savourez un dernier petit-déjeuner local, peut-être un Khao Tom (soupe de riz) ou un Roti.</li><li><strong>🛍️ Derniers achats de souvenirs ou détente</strong>: Selon l'heure de votre vol, profitez d'un peu de temps libre pour des achats de dernière minute ou simplement vous détendre.</li><li><strong>✈️ Transfert à l'aéroport Suvarnabhumi (BKK) et vol retour</strong>: Dirigez-vous vers l'aéroport pour votre vol de retour vers Francfort-sur-le-Main.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Bangkok-thailande-3i21g6j7jqvc6p3/main/jour15.jpg" class="w-full h-64 object-cover" alt="Jour 15">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛄 Bagages</p>
+                                <p class="text-gray-700">Assurez-vous que vos bagages respectent les restrictions de poids et de taille de votre compagnie aérienne.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-16" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 16</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée à Francfort</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un voyage riche en découvertes et en détente, vous atterrissez à Francfort-sur-le-Main, la tête pleine de souvenirs thaïlandais.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛬 Arrivée à l'aéroport de Francfort (FRA)</strong>: Atterrissage et récupération des bagages.</li><li><strong>🏡 Retour à la maison</strong>: Fin de votre voyage inoubliable en Thaïlande.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Bangkok-thailande-3i21g6j7jqvc6p3/main/jour16.jpg" class="w-full h-64 object-cover" alt="Jour 16">
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>1198 €/pers (A/R Francfort-Bangkok)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>Environ 150-200 €/pers (BTS, MRT, taxis, tuk-tuks, bateaux, day trips)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>Environ 450-750 €/pers (30-50€/jour pour street food et restaurants moyens)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>Environ 750-1200 €/pers (15 nuits en hôtel 3* à 50-80€/nuit)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>Environ 250-400 €/pers (entrées temples, marchés, cours de cuisine, spa, excursions)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Novembre à Février</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Saison sèche et températures plus douces</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">☀️ En décembre-janvier, les températures varient entre 20 et 32°C. Le temps est sec et ensoleillé. Prévoir des vêtements légers et un chapeau.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💳 La monnaie est le Baht Thaïlandais (THB). Les cartes de crédit sont acceptées dans les grands établissements, mais prévoyez du liquide pour les marchés et petits commerces.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🚆 Le système de transport est efficace : Skytrain (BTS), Métro (MRT), taxis (demandez le compteur), tuk-tuks (négociez le prix) et bateaux sur le Chao Phraya.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">📶 Une carte SIM locale ou une eSIM est recommandée pour rester connecté (opérateurs comme AIS, TrueMove H, Dtac). Le Wi-Fi est largement disponible.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🛂 Le visa n'est pas requis pour les séjours de moins de 30 jours pour les citoyens de l'UE. Un passeport valide 6 mois après la date de retour est nécessaire.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Bangkok-thailande-3i21g6j7jqvc6p3/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://www.kayak.fr/flights/FRA-BKK/2026-12-19/2027-01-03" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🛬 Réserve ton vol</strong></a></li>
+                    
+                        <li><a href="https://www.tourismthailand.org/home" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Tourisme Thaïlande</strong></a></li>
+                    
+                        <li><a href="https://www.bts.co.th/eng/index.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🚇 BTS Skytrain</strong></a></li>
+                    
+                        <li><a href="https://www.accuweather.com/fr/th/bangkok/318821/weather-forecast/318821" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ Météo Bangkok</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
